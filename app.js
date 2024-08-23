@@ -19,10 +19,7 @@ app.set('view engine', 'ejs');
 app.use(session({ secret: 'secret', resave: true, saveUninitialized: true }));
 
 app.use(passport.initialize());
-app.use
-
-
-app.use(passport.session());
+app.use(passport.session());  // This line was missing
 
 // Routes
 app.use('/auth', authRoutes);
